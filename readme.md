@@ -17,5 +17,7 @@ Instructions the hard way
 Instructions the easy way
 ------------
 
+This approach will use a container [I previously uploaded to Docker registry](https://index.docker.io/u/luisbebop/sinatra-hello-world/)
+
     #1. run the docker container already uploaded to http://index.docker.io
 	$ sudo docker run -d -p 5000:5000 luisbebop/sinatra-hello-world
