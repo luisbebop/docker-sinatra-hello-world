@@ -21,3 +21,15 @@ This approach will use a container [I previously uploaded to Docker registry](ht
 
     #1. run the docker container already uploaded to http://index.docker.io
 	$ sudo docker run -d -p 5000:5000 luisbebop/sinatra-hello-world
+	
+Upgrade the container
+-----------
+
+    # change the code, compile and push to github
+    $ sudo docker build -t luisbebop/sinatra-hello-world .
+    $ sudo docker push luisbebop/sinatra-hello-world
+    
+    # on docker server or the same machine
+    $ sudo docker stop container-id
+    $ sudo docker pull luisbebop/sinatra-hello-world
+    $ sudo docker run -d -p 5000:5000 luisbebop/sinatra-hello-world
