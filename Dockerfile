@@ -1,5 +1,6 @@
-FROM ubuntu
-RUN apt-get install -y ruby rubygems git
+FROM ubuntu:14.04
+RUN apt-get update
+RUN apt-get install -y ruby-full rubygems-integration git
 RUN git clone https://github.com/luisbebop/docker-sinatra-hello-world.git /opt/sinatra/
 RUN gem install bundler
 EXPOSE 5000
